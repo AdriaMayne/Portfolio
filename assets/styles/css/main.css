@@ -1,0 +1,249 @@
+*, html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    /* overflow: hidden; Para eliminar el scroll */
+}
+
+/* Hide scrollbar (horizontal and vertical)*/
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+h1 { 
+    text-align: center;
+    padding-top: 5%;
+}
+
+#landing {
+    background: #252934;
+    color: #FFF;
+    height: 100vh;
+}
+
+#projects-section {
+    background: var(--blue-lightest);
+}
+
+#navModal {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.modal-body {
+    list-style-type: none;
+    text-align: center;
+    font-size: 6rem;
+}
+
+.modal-dialog {
+    max-width: 100%!important;
+}
+
+.modal-body li a {
+    text-decoration: none;
+    color: rgba(230, 230, 230, 0.9);
+}
+
+.modal-body li a:hover {
+    color: #FFF;
+}
+
+#menu {
+    position: sticky;
+    z-index: 100;
+}
+
+#menuToggler {
+    top: 5px;
+    left: 5px;
+}
+
+/* --------- SKILLS --------- */
+@media (min-width: 1140px) {
+    #skills {
+        height: 100vh;
+        background-color: #344880;
+    }
+
+    .categories {
+        display: flex;
+        height: 100%;
+    }
+
+    .category {
+        width: 33.33vw;
+        height: 100%;
+    }
+
+    .grow { 
+        width: 33.33vw;
+        height: 100%;
+    }
+    
+    .grow-transition {
+        -webkit-transition: width 2s;
+        transition: width 2s;
+    }
+
+    .grow:hover, .grow-faker { 
+        width: 429vw;
+    }
+
+    #content {
+        display: none;
+        width: 66.66vw;
+        height: 100%;
+    }
+
+    .rotate {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .rotate-ccw {
+        writing-mode: tb-rl;
+        transform: rotate(-180deg);
+    }
+    
+    .rotate-acw {
+        writing-mode: tb-rl;
+    }
+
+    .content {
+        height: 90%;
+        width: 90%;
+        margin-left: 5%;
+        position: relative;
+    }
+    
+    .indicatorContainer {
+        position: absolute;
+    }
+}
+
+@media (max-width: 1140px) {
+    #skills {
+        height: 100%;
+        display: block;
+        background-color: #344880;
+    }
+
+    .content {
+        height: 90%;
+        width: 90%;
+        margin-left: 5%;
+        display: block;
+    }
+    
+    .indicatorContainer {
+        position: relative;
+    }
+}
+
+#category-front {
+    background-color: #344880;
+}
+
+#category-personal {
+    background-color: #252934;
+    color: #FFF;
+}
+
+#category-back {
+    background-color: #344880;
+}
+
+.personal-card {
+    display: block;
+}
+
+.personal-card img {
+    max-width: 50%;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+/* --------- CONTACT --------- */
+#contact {
+    background: #FCF7F5;
+    display: flex;
+}
+
+#contact-photo {
+    width: 40vw;
+    height: 100%;
+    background-image: url('../../media/foggy-forest.jpg');
+    background-size: cover;
+    background-position: center center;
+    opacity: 1;
+}
+
+#contact-form {
+    width: 60vw;
+    height: 100%;
+    padding: 5px;
+}
+
+/* findmathew */
+@media screen and (min-width: 600px) {
+    #landing .text {
+        font-size: 32pt;
+        line-height: 36pt;
+    }
+    #landing .highlight {
+        font-size: 36pt;
+        line-height: 36pt;
+    }
+}
+
+.canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    z-index: 1;
+}
+
+.flex {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+
+#arrow {
+    background-image: url('../../media/arrow-down-white.svg');
+    background-size: 3.25rem 1.9375rem;
+    width: 3.25rem;
+    height: 1.9375rem;
+    position: absolute;
+    bottom: 2rem;
+    margin-left: -1.625rem;
+}
+
+.text {
+    text-align: center;
+    margin: 0 0 20px 0;
+    font-size: 16pt;
+    line-height: 20pt;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.highlight {
+    font-size: 18pt;
+    color: #E31B6D; 
+}

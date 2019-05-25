@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>AdriaMayne - Portfolio</title>
+        <link rel="stylesheet" type="text/css" href="./assets/styles/css/theme.css">
+        <link rel="stylesheet" type="text/css" href="./assets/styles/css/main.css">
+
+        <!-- Animate.css -->
+        <link rel="stylesheet" type="text/css" href="./assets/libs/animate.css/animate.css">
+
+        <!-- jQuery -->
+        <script src="./assets/libs/jquery/jquery-3.4.1.min.js"></script>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="./assets/libs/bootstrap/css/bootstrap.min.css">
+        <script src="./assets/libs/bootstrap/js/bootstrap.min.js"></script>
+        <!-- RadialIndicator -->
+        <script src="./assets/libs/radialIndicator/radialIndicator.min.js"></script>
+
+        <script src="./assets/libs/pt.js/pt.min.js"></script>
+    </head>
+    <body>
+        <!-- LANDING -->
+        <section id="landing" class="flex">
+            <div id="pt" class="canvas"></div>
+            <div class="flex">
+                <div class="text presentation">
+                    <span class="highlight" href="#contact">Adrià Mayné</span>
+                    <br>
+                    Full stack developer
+                </div>
+                <div class="arrow">
+                    <a id="arrow" href="#skills"></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills">
+            <div class="categories text-center">
+                <div id="category-front" class="grow" data-name="FRONTEND" data-position="1">
+                    <h2>FRONTEND</h2>
+                    <div id="content-front" class="content d-none">
+                        <div class="indicatorContainer" data-percentage="60"></div>
+                        <div class="indicatorContainer" data-percentage="80"></div>
+                        <div class="indicatorContainer" data-percentage="50"></div>
+                        <div class="indicatorContainer" data-percentage="85"></div>
+                        <div class="indicatorContainer" data-percentage="20"></div>
+                    </div>
+                </div>
+                <div id="category-personal" class="grow" data-name="PERSONAL" data-position="2">
+                    <h2 class="my-3">PERSONAL</h2>
+                    <div id="content-personal" class="container d-none">
+                        <div id="personal-content" class="row">
+                            <!-- <div class="personal-card col-lg-4">
+                                <img class="col-10" src="./assets/media/antonio.jpg" alt="">
+                                <h4 class="mt-1">Esto es una prueba!</h4>
+                                <p>Esto es una prueba. Esto es una prueba.</p>
+                                <p>- Antonio Domingo</p>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <div id="category-back" class="grow" data-name="BACKEND" data-position="3">
+                    <h2>BACKEND</h2>
+                    <div id="content-back" class="content d-none">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects-section">
+            <div class="container">
+                <h1>PROJECTS</h1>
+                <div id="projects">
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact">
+            <div id="contact-photo"></div>
+            <div id="contact-form" class="container">
+                <h2 class="text-center">Contact</h2>
+                <div class="col-8 offset-2">
+                    <form action="https://admin.adriamayne.com/api/contact" method="post">
+                        <div class="form-row">
+                            <div class="form-group col-6">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter name">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="name">Email</label>
+                                <input type="mail" class="form-control" id="email" placeholder="Enter mail">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-12">
+                                <label for="message">Message</label>
+                                <textarea name="message" id="message" class="form-control" rows="5" placeholder="Enter message"></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <div class="social">
+
+                </div>
+            </div>
+        </section>
+
+        <div id="menu">
+            <div id="menuToggler" class="mt-1 ml-1">
+                <a id="nav-btn" class="btn btn-danger" data-toggle="modal" data-target="#navModal">X</a>
+            </div>
+        </div>
+        <div id="navModal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog m-0 p-0 w-100 h-100" role="document">
+                <div class="modal-content m-0 p-0 w-100 h-100 bg-transparent">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <li>
+                            <a href="#landing">Landing</a>
+                        </li>
+                        <li>
+                            <a href="#skills">Skills</a>
+                        </li>
+                        <li>
+                            <a href="#projects">Projects</a>
+                        </li>
+                        <li>
+                            <a href="#contact">Contact</a>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./assets/scripts/canvas.js"></script>
+        <script src="./assets/scripts/animate.js"></script>
+        <script src="./assets/scripts/skills.js"></script>
+        <script src="./assets/scripts/radialIndicator.js"></script>
+        <script src="./assets/scripts/main.js"></script>
+
+        <!-- DATA -->
+        <script src="./assets/scripts/data/testimonials.js"></script>
+        <script src="./assets/scripts/data/projects.js"></script>
+    </body>
+</html>

@@ -1,0 +1,12 @@
+:root {
+    --blue-darkest: #2E3440;
+    --blue-dark: #3B4252;
+    --blue-light: #434C5E;
+    --blue-lightest: #4C566A;
+
+    --text-normal: #D8DEE9;
+    --text-light: #E5E9F0;
+    --text-lightest: #ECEFF4;
+
+    --space-color: #001628;
+}
