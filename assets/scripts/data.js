@@ -29,7 +29,18 @@ function getProjects() {
         success: function(json) {
             console.log("----- Projects -----");
             console.log(json.data);
-            // Do something.
+            var projects = json.data;
+
+            projects.forEach(project => {
+                var newProject = "<div class='personal-card col-lg-4 mb-3 mt-5 text-center'><img class='col-8 mb-2' src=" + adminURL + project.image + " alt=" + project.title + ">";
+
+                if (project.url) {
+                    newProject += "<a href=" + project.url + " target='_blank' rel='noopener noreferrer'>" + project.title + "</a>";
+                }
+
+                newProject += "</div>";
+                $('#projects-container').append(newProject);
+            });
         },
         error: function(jqxhr, exception) {
             console.log("Error al recibir los proyectos.");
@@ -52,7 +63,7 @@ function getTestimonials() {
             var testimonials = json.data;
 
             testimonials.forEach(testimonial => {
-                var newTestimonial = "<div class='personal-card col-lg-3 mb-3 mt-5 text-center'><img class='col-8 mb-2' src=" + adminURL + testimonial.image + " alt=" + testimonial.name + "><p>" + testimonial.message + "</p><a href=" + testimonial.url + " target='_blank' rel='noopener noreferrer'>- " + testimonial.name + "</a></div>";
+                var newTestimonial = "<div class='personal-card col-lg-4 mb-3 mt-5 text-center'><img class='col-8 mb-2' src=" + adminURL + testimonial.image + " alt=" + testimonial.name + "><p>" + testimonial.message + "</p><a href=" + testimonial.url + " target='_blank' rel='noopener noreferrer'>- " + testimonial.name + "</a></div>";
                 $('#personal-content').append(newTestimonial);
             });
         },
@@ -62,6 +73,27 @@ function getTestimonials() {
         }
     });
 }
+
+$("#contact-form").submit(function(e) {
+    e.preventDefault();
+    var form = $(this);
+    var url = adminURL + "api/contact";
+
+    $.ajax({
+        type: "POST",
+        url: url,
+        data: form.serialize(),
+        success: function(data) {
+            var response = "<div class='alert alert-success' role='alert'>" + data + "<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>";
+            $('#form-response').append(response);
+        },
+        error: function(jqxhr, exception) {
+            console.log("Status: " + jqxhr.status + " Exception: " + exception);
+            var response = "<div class='alert alert-danger' role='alert'>Status: " + jqxhr.status + " Exception: " + exception + "</div>";
+            $('#form-response').append(response);
+        }
+    });
+});
 
 getTestimonials();
 getLanguages();

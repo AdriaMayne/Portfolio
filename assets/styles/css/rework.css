@@ -96,14 +96,15 @@
 @media (min-width: 1140px) {
     #skills {
         height: 100vh;
-        background-color: #3c3c3c;
+        background-color: #2c2c2c;
         display: flex;
+        color: #FFF;
     }
 
     #frontend {
         width: 50%;
         height: 100%;
-        background-color: #2c2c2c;
+        background-color: #E31B6D;
     }
 
     #backend {
@@ -114,18 +115,20 @@
 
     .patata {
         width: 90%!important;
-        -webkit-transition: width 1.6s;
-        transition: width 1.6s;
+        -webkit-transition: width 1.2s;
+        transition: width 1.2s;
     }
 
-    .rotate {
-        background: #FF0000;
-        width: 10%!important;
+    .center-text {
         display: flex;
         align-items: center;
         justify-content: center;
-        -webkit-transition: width 1.6s;
-        transition: width 1.6s;
+    }
+
+    .rotate {
+        width: 10%!important;
+        -webkit-transition: width 1.2s;
+        transition: width 1.2s;
     }
 
     .rotate-ccw {
@@ -149,7 +152,7 @@
 
 /* -------------------- TESTIMONIALS -------------------- */
 #testimonials {
-    background: #3c3c3c;
+    background: #2c2c2c;
     text-align: center!important;
     color: #FFF;
 }
@@ -178,4 +181,39 @@
 .personal-card a:hover {
     color: rgb(71, 116, 117);
     text-decoration: none;
+}
+
+/* -------------------- PROJECTS -------------------- */
+#projects {
+    background: #4C4C4C;
+    text-align: center!important;
+    color: #FFF;
+    height: 100%;
+}
+
+/* -------------------- CONTACT -------------------- */
+#contact {
+    height: 100vh;
+}
+
+@media (min-width: 1140px) {
+    #contact {
+        height: 100vh;
+    }
+
+    .prueba {
+        height: 100vh;
+    }
+}
+
+@media (max-width: 1140px) {
+    #contact {
+        height: 100%;
+        display: block;
+        background-color: #344880;
+    }
+
+    .prueba {
+        height: 0;
+    }
 }
