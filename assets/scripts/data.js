@@ -52,7 +52,7 @@ function getTestimonials() {
             var testimonials = json.data;
 
             testimonials.forEach(testimonial => {
-                var newTestimonial = "<div class='personal-card col-lg-4 mb-3 mt-5'><img class='col-8 mb-2' src=" + adminURL + testimonial.image + " alt=" + testimonial.name + "><p>" + testimonial.message + "</p><a href=" + testimonial.url + " target='_blank'>- " + testimonial.name + "</a></div>";
+                var newTestimonial = "<div class='personal-card col-lg-3 mb-3 mt-5 text-center'><img class='col-8 mb-2' src=" + adminURL + testimonial.image + " alt=" + testimonial.name + "><p>" + testimonial.message + "</p><a href=" + testimonial.url + " target='_blank' rel='noopener noreferrer'>- " + testimonial.name + "</a></div>";
                 $('#personal-content').append(newTestimonial);
             });
         },

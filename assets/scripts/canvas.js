@@ -2,14 +2,10 @@
 // http://williamngan.github.io/pt/docs/
 
 var space;
+var count;
+var view_width = $(window).width();
 
 function drawSpace () {
-    //// 1. Define Space and Form
-    // var colors = {
-        // a1: "#ff2d5d", a2: "#42dc8e", a3: "#2e43eb", a4: "#ffe359",
-        // b1: "#96bfed", b2: "#f5ead6", b3: "#f1f3f7", b4: "#e2e6ef"
-    // };
-
     var colors = {
         a1: "#E31B6D", a2: "#FFFFFF", a3: "#E31B6D", a4: "#FFFFFF",
         b1: "#96bfed", b2: "#f5ead6", b3: "#f1f3f7", b4: "#e2e6ef"
@@ -23,7 +19,14 @@ function drawSpace () {
     var center = space.size.$divide(2);
     var line = new Line(640, space.size.y).to(space.size); // --> Establece el elemento sobre el que se mueven las líneas.
 
-    var count = 150;
+    // Calculate the number of lines depending on the viewport width
+    if (view_width <= 600) {
+        count = 110;
+    } else if (view_width <= 1140) {
+        count = 130;
+    } else {
+        count = 150;
+    }
     var r = Math.min(space.size.x, space.size.y) * 0.8;
     var mouse = center.clone();
 
