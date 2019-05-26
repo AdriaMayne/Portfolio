@@ -10,7 +10,6 @@ $(function() {
             $('#content-front').removeClass('d-none');
             $('#content-personal').removeClass('d-none');
             $('#content-back').removeClass('d-none');
-            alert('Hola');
         } else {
             $('#category-front').hover(function(){
                 $('#category-personal').addClass(rotate_acw);
