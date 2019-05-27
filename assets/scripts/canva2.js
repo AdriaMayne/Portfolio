@@ -81,7 +81,9 @@ function drawColourSpace() {
 drawColourSpace();
 
 $(window).resize(function(){
+    space.removeAll();
     colourSpace.removeAll();
     $('canvas').remove();
     drawColourSpace();
+    drawSpace();
 });
