@@ -15,8 +15,8 @@
         <!-- Bootstrap -->
         <link rel="stylesheet" defer href="./assets/libs/bootstrap/css/bootstrap.min.css">
         <script src="./assets/libs/bootstrap/js/bootstrap.min.js"></script>
-        <!-- RadialIndicator -->
-        <script src="./assets/libs/radialIndicator/radialIndicator.min.js"></script>
+        <!-- FontAwesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     </head>
     <body>
         <!-- LANDING -->
@@ -37,11 +37,11 @@
         <section id="skills">
             <div id="frontend" class="center-text">
                 <h2 id="frontend-title">FRONTEND</h2>
-                <div class="content d-none"></div>
+                <div class="content container d-none"></div>
             </div>
             <div id="backend" class="center-text">
                 <h2 id="backend-title">BACKEND</h2>
-                <div class="content d-none"></div>
+                <div class="content container d-none"></div>
             </div>
         </section>
         <!-- TESTIMONIALS -->
@@ -61,9 +61,8 @@
             <div class="container-fluid">
                 <div class="row">
                     <div id="colours" class="canvas col-0 col-lg-6 prueba pl-0"></div>
-                    <!-- <div class="col-0 col-lg-7 prueba"></div> -->
                     <div class="col-9 col-lg-4 mx-auto my-auto">
-                        <h2 class="pb-5">CONTACTO</h2>
+                        <h2 class="pb-5 mt-2">CONTACTO</h2>
                         <form id="contact-form" action="" method="post">
                             <div class="form-row">
                                 <div class="form-group col-6">
@@ -71,7 +70,7 @@
                                     <input type="text" class="form-control" id="name" name="name" placeholder="Introduce tu nombre" required>
                                 </div>
                                 <div class="form-group col-6">
-                                    <label for="name">Email</label>
+                                    <label for="email">Email</label>
                                     <input type="mail" class="form-control" id="email" name="email" placeholder="Introduce tu correo" required>
                                 </div>
                             </div>
@@ -98,6 +97,18 @@
                 </div>
             </div>
         </section>
+        <footer>
+            <div class="container">
+                <div class="text-center center-block">
+                    <a href="https://www.instagram.com/adriamayne_dev/" aria-label="Open my instagram profile"><i id="social-instagram" class="fab fa-instagram fa-3x social"></i></a>
+                    <a href="https://twitter.com/AdriaMayne_dev" aria-label="Open my twitter profile"><i id="social-twitter" class="fab fa-twitter fa-3x social"></i></a>
+                    <a href="https://github.com/AdriaMayne" aria-label="See my projects on github"><i id="social-github" class="fab fa-github fa-3x social"></i></a>
+                    <a href="https://jsfiddle.net/user/AdriaMayne/" aria-label="See my coding playground on JsFiddle"><i id="social-jsfiddle" class="fab fa-jsfiddle fa-3x social"></i></a>
+                    <a href="mailto:adriamayne@gmail.com" aria-label="Send me an email"><i id="social-mail" class="far fa-envelope fa-3x social"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=651735458" aria-label="Let's chat on Whatsapp"><i id="social-whatsapp" class="fab fa-whatsapp fa-3x social"></i></a>
+                </div>
+            </div>
+        </footer>
         <!-- SCRIPTS -->
         <script src="./assets/scripts/canvas.js"></script>
         <script src="./assets/scripts/data.js"></script>

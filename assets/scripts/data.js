@@ -49,6 +49,9 @@ $(function() {
             $('#frontend').removeClass("rotate rotate-ccw");
             $('#backend .content').addClass('d-none');
         });
+    } else {
+        $('#frontend .content').removeClass('d-none');
+        $('#backend .content').removeClass('d-none');
     }
 });
 
@@ -66,7 +69,16 @@ function getLanguages() {
             var languages = json.data;
 
             languages.forEach(language => {
-                var newLanguage = "<div>LANG: " + language.name + "<img src=" + adminURL + language.image + " height='60' width='60' alt=" + language.name + "></div>";
+                var newLanguage = "<div class='row text-center mt-3'>";
+                        newLanguage += "<div class='skill-card m-auto col-2'>";
+                            newLanguage += "<h6>" + language.name + "</h6>"
+                        newLanguage += "</div><div class='skill-card m-auto col-2'>";
+                            newLanguage += "<img src=" + adminURL + language.image + " height='60' width='60' alt=" + language.name + ">";
+                        newLanguage += "</div><div class='skill-card my-auto col-md-8'>";
+                            newLanguage += "<div class='progress' style='height: 4vh;'><div class='progress-bar  bg-warning' role='progressbar' aria-valuenow=" + language.percentage + " aria-valuemin='0' aria-valuemax='100' style='width: " + language.percentage + "%'>";
+                                newLanguage += "<h6 class='justify-content-center d-flex position-absolute w-100'>" + language.percentage + "%</h6>";
+                        newLanguage += "</div>";
+                    newLanguage += "</div>";
 
                 if (language.category == "0") {
                     $('#frontend .content').append(newLanguage);
@@ -75,8 +87,6 @@ function getLanguages() {
                 }
 
             });
-            // $('#frontend .content')
-            // Do something.
         },
         error: function(jqxhr, exception) {
             console.log("Error al recibir los lenguajes.");

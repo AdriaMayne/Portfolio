@@ -93,12 +93,49 @@
 }
 
 /* -------------------- SKILLS -------------------- */
+#skills {
+    background-color: #2c2c2c;
+    color: #FFF;
+}
+
+.skill-card {
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-card img {
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+@media (max-width: 1140px) {
+    #skills {
+        height: 100%;
+        display: block;
+    }
+
+    #frontend {
+        background-color: #2c2c2c;
+        padding: 20px 0 20px 0;
+        text-align: center;
+    }
+
+    #backend {
+        background-color: #3c3c3c;
+        padding: 20px 0 20px 0;
+        text-align: center;
+    }
+
+    .skill-card {
+        padding-bottom: 10px;
+    }
+    
+}
+
 @media (min-width: 1140px) {
     #skills {
         height: 100vh;
-        background-color: #2c2c2c;
         display: flex;
-        color: #FFF;
     }
 
     #frontend {
@@ -141,13 +178,6 @@
     }
 }
 
-@media (max-width: 1140px) {
-    #skills {
-        height: 100%;
-        display: block;
-        background-color: #2c2c2c;
-    }
-}
 
 /* -------------------- TESTIMONIALS -------------------- */
 #testimonials {
@@ -184,11 +214,12 @@
 
 /* -------------------- PROJECTS -------------------- */
 #projects {
-    background: #4C4C4C;
+    background: #3c3c3c;
     text-align: center!important;
     color: #FFF;
     height: 100%;
 }
+
 
 /* -------------------- CONTACT -------------------- */
 #contact {
@@ -235,4 +266,56 @@
     .prueba {
         height: 0;
     }
+}
+
+
+/* -------------------- FOOTER -------------------- */
+footer {
+    padding: 40px 0;
+    background-color: #222;
+}
+  
+footer a {
+    color: #dedede;
+}
+  
+footer .social:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+  
+footer .social {
+    -webkit-transform: scale(0.8);
+    /* Browser Variations: */
+    
+    -moz-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+}
+
+footer #social-instagram:hover {
+    color: #2C6A93;
+}
+  
+footer #social-twitter:hover {
+    color: #4099FF;
+}
+  
+footer #social-github:hover {
+    color: #030203;
+}
+  
+footer #social-jsfiddle:hover {
+    color: #0084ff;
+}
+
+footer #social-mail:hover {
+    color: #C20806;
+}
+
+footer #social-whatsapp:hover {
+    color: #25d366;
 }
