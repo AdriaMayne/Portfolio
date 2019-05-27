@@ -10,6 +10,20 @@ function getLanguages() {
         success: function(json) {
             console.log("----- Languages -----");
             console.log(json.data);
+
+            var languages = json.data;
+
+            languages.forEach(language => {
+                var newLanguage = "<div>LANG: " + language.name + "<img src=" + adminURL + language.image + " height='60' width='60' alt=" + language.name + "></div>";
+
+                if (language.category == "0") {
+                    $('#frontend .content').append(newLanguage);
+                } else {
+                    $('#backend .content').append(newLanguage);
+                }
+
+            });
+            // $('#frontend .content')
             // Do something.
         },
         error: function(jqxhr, exception) {
