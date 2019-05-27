@@ -149,7 +149,6 @@
     }
 }
 
-
 /* -------------------- TESTIMONIALS -------------------- */
 #testimonials {
     background: #2c2c2c;
@@ -157,7 +156,7 @@
     color: #FFF;
 }
 
-@media (min-width: 1140px) {
+@media (min-width: 1800px) {
     #testimonials {
         height: 100vh;
     }
@@ -193,7 +192,28 @@
 
 /* -------------------- CONTACT -------------------- */
 #contact {
-    height: 100vh;
+    background: #2c2c2c;
+    color: #FFF;
+}
+
+#contact h2 {
+    text-align: center!important;
+}
+
+.form-control {
+    background-color: transparent!important;
+    color: #FFF!important;
+    border: 1px solid rgba(197, 179, 88, 0.6)!important;
+}
+
+.form-control:focus, .btn:focus, .btn:hover {
+    border-color: #E31B6D!important;
+    box-shadow: 0 0 0 0.2rem rgba(227, 27, 109, .25)!important;
+}
+
+.btn {
+    color: #FFF!important;
+    border: 1px solid rgba(197, 179, 88, 0.6)!important;
 }
 
 @media (min-width: 1140px) {
@@ -210,7 +230,6 @@
     #contact {
         height: 100%;
         display: block;
-        background-color: #344880;
     }
 
     .prueba {

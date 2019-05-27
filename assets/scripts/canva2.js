@@ -7,7 +7,7 @@ function drawColourSpace() {
         a1: "#ff2d5d", a2: "#42dc8e", a3: "#2e43eb", a4: "#ffe359",
         b1: "#96bfed", b2: "#f5ead6", b3: "#f1f3f7", b4: "#e2e6ef"
     };
-    colourSpace = new CanvasSpace("colours").setup( {bgcolor: "#222"} );
+    colourSpace = new CanvasSpace("colours").setup( {bgcolor: "#2c2c2c"} );
     var form = new Form( colourSpace );
     
     
@@ -16,7 +16,7 @@ function drawColourSpace() {
     center = colourSpace.size.$divide(2);
     var mouse = center.clone();
     
-    var steps = 200;
+    var steps = 180;
     var r = Math.min( colourSpace.size.x, colourSpace.size.y ) * 0.4;
     var dr = Math.min( colourSpace.size.x, colourSpace.size.y ) * 0.4 / steps;
     
@@ -63,7 +63,6 @@ function drawColourSpace() {
                 } else {
                     mouse.set(x,y);
                 }
-                console.log("X: " + x + " Y:" + y + " Size: " + colourSpace.size.x);
             }
         },
         
