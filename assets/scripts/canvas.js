@@ -91,9 +91,3 @@ function drawSpace () {
 }
 
 drawSpace();
-
-$(window).resize(function(){
-    space.removeAll();
-    $('canvas').remove();
-    drawSpace();
-});
