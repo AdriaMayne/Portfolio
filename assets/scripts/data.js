@@ -113,7 +113,7 @@ function getProjects() {
 
                 var newProject = "<div class='project row mt-2'>";
                         newProject += "<div class='col-lg-7 m-auto'>";
-                            newProject += "<img class='col-3 mx-auto mb-3' src=" + adminURL + project.image + " alt='LOGO'>";
+                            newProject += "<img class='col-3 mx-auto mb-3' src=" + adminURL + project.logo + " alt='LOGO'>";
                             newProject += "<h4 class='my-3'>" + project.title + "</h4>";
                             newProject += "<div class='col-lg-8 mx-auto'>";
                                 newProject += "<p class='text-justify'>" + project.description + "</p>";
