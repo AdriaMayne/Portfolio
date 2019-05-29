@@ -220,6 +220,19 @@
     height: 100%;
 }
 
+.tag-pill {
+    background-color: #dedede;
+    border: none;
+    color: #222;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
 
 /* -------------------- CONTACT -------------------- */
 #contact {
@@ -308,14 +321,6 @@ footer #social-github:hover {
     color: #030203;
 }
   
-footer #social-jsfiddle:hover {
-    color: #0084ff;
-}
-
-footer #social-mail:hover {
-    color: #C20806;
-}
-
-footer #social-whatsapp:hover {
-    color: #25d366;
+footer #social-linkedin:hover {
+    color: #0073b1;
 }

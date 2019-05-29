@@ -106,16 +106,38 @@ function getProjects() {
             console.log("----- Projects -----");
             console.log(json.data);
             var projects = json.data;
-
+            var count = 0;
+            
             projects.forEach(project => {
-                var newProject = "<div class='personal-card col-lg-4 mb-3 mt-5 text-center'><img class='col-8 mb-2' src=" + adminURL + project.image + " alt=" + project.title + ">";
+                var tags = project.tags;
 
-                if (project.url) {
-                    newProject += "<a href=" + project.url + " target='_blank' rel='noopener noreferrer'>" + project.title + "</a>";
-                }
+                var newProject = "<div class='project row mt-2'>";
+                        newProject += "<div class='col-lg-7 m-auto'>";
+                            newProject += "<img class='col-3 mx-auto mb-3' src=" + adminURL + project.image + " alt='LOGO'>";
+                            newProject += "<h4 class='my-3'>" + project.title + "</h4>";
+                            newProject += "<div class='col-lg-8 mx-auto'>";
+                                newProject += "<p class='text-justify'>" + project.description + "</p>";
 
-                newProject += "</div>";
+                                if(tags && tags.length > 0){
+                                    tags.forEach(tag => {
+                                        newProject += "<div class='tag-pill'>" + tag.title + "</div>";
+                                    });
+                                }
+
+                            newProject += "</div>";
+                        newProject += "</div>";
+
+                            if (count === 0 || (count%2)) {
+                                newProject += "<div class='col-lg-5'>";
+                            } else {
+                                newProject += "<div class='col-lg-5 order-last order-lg-first'>";
+                            }
+
+                            newProject += "<img src=" + adminURL + project.mockup + " alt=" + project.title + ' mockup' + ">";
+                        newProject += "</div>";
+                    newProject += "</div>";
                 $('#projects-container').append(newProject);
+                count++;
             });
         },
         error: function(jqxhr, exception) {
