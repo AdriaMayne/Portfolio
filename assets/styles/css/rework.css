@@ -234,6 +234,10 @@
     font-size: 0.8rem;
 }
 
+.mockup-image {
+    max-width: 95%;
+}
+
 /* -------------------- CONTACT -------------------- */
 #contact {
     background: #2c2c2c;
